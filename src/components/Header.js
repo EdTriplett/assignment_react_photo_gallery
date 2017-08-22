@@ -5,13 +5,12 @@ import SearchBar from "./SearchBar.js"
 
 class Header extends Component {
   constructor() {
-    super() {
+    super()
       this.state = {
         selectedFilter: "",
         searchText: "",
         sortField: ""
       }
-    }
   }
 
   render() {
@@ -26,3 +25,4 @@ class Header extends Component {
     )
   }
 }
+export default Header;
