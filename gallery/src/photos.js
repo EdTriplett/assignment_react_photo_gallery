@@ -4677,3 +4677,5 @@ const instagramResponse = {
     }
   ]
 };
+
+export default instagramResponse;

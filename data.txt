@@ -19,13 +19,19 @@ post.images = {
   }
 
 
-Username
-the time it was posted,
-the photo itself (is link)
-likes Count
-comments  Count
-Hashtags
-Filter used
+
+
+Components:
+  header,
+  search bar
+  Gallery: container for ind. posts, each of which have
+    Username
+    the time it was posted,
+    the photo itself (is link)
+    likes Count
+    comments  Count
+    Hashtags
+    Filter used
 
 
 
