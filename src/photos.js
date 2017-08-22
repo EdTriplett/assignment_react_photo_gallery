@@ -4678,4 +4678,4 @@ const instagramResponse = {
   ]
 };
 
-module.exports= instagramResponse;
+module.exports = instagramResponse;

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./../App.css";
 import Gallery from "./Gallery.js";
-import SearchBar from "./SearchBar.js";
+import Header from "./Header.js"
 
 class App extends Component {
   render() {

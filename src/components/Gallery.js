@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Post from "./Post.js";
-const instagramResponse = require("./photos.js");
+const instagramResponse = require("./../photos.js");
 //console.log(instagramResponse)
 const data = instagramResponse.data;
 //fix in a second
