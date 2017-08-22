@@ -7,15 +7,15 @@ const Post = ({ post }) => {
   //  console.log(username);
   return (
     <div className="card">
-      <img
+      <a href={`${images.standard_resolution.url}`}><img
         className="card-img-top"
         src={images.thumbnail.url}
         alt="post image card"
-      />
+      /></a>
       <div className="card-body">
-        <p className="card-text">
+        <a href={`https://www.instagram.com/${user.username}/`}><p className="card-text">
           Username: {user.username}
-        </p>
+        </p></a>
         <p className="card-text">
           Likes: {likes.count}
         </p>
@@ -26,7 +26,7 @@ const Post = ({ post }) => {
           Filter: {filter}
         </p>
         <p className="card-text">
-          Tags: {tags}
+          Tags: {'#' + tags.join(", #")}
         </p>
         <p className="card-text">
           <small className="muted">
