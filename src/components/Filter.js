@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
 const Filter = ()=> {
-  
+
+  const filtersArray = ["Normal", "Lark", "Reyes", "Valencia", "Inkwell", "Ludwig"]
+
   return (
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
+    <div className="dropdown">
+      <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter by Filter
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {filtersArray.map(filter => <a className="dropdown-item" href="#">{filter}</a>)}
       </div>
     </div>
   )

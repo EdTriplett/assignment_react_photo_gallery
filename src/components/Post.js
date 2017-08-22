@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { data } from "./photos.js";
 
 const Post = ({ post }) => {
-  //TODO: CONVERT UNIX EPOCH TIME STUFFZ
+
   const { user, created_time, images, likes, comments, tags, filter } = post;
   return (
     <div className="col-12 col-md-4">
