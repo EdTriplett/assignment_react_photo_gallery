@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Gallery from "./Gallery.js";
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
         <div className="App-header">
           <h1>Gallery</h1>
         </div>
-        {/* <Gallery /> */}
+        <Gallery />
       </div>
     );
   }
