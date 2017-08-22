@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { data } from "./photos.js";
+const post = data[0];
 
 const Post = () => {
   //TODO: CONVERT UNIX EPOCH TIME STUFFZ
-  const { ...post } = post;
-  console.log(username);
+  const { username, creation_time, images, likes, comments, tags, filter } = post;
+//  console.log(username);
   return (
     <tr>
       <td>
@@ -13,7 +15,7 @@ const Post = () => {
         {creation_time}
       </td>
       <td>
-        {images.thumbnail}
+        <img src={images.thumbnail.url} />
       </td>
       <td>
         {likes.count}
@@ -22,7 +24,7 @@ const Post = () => {
         {comments.count}
       </td>
       <td>
-        {hashtags.count}
+        {tags}
       </td>
       <td>
         {filter}
@@ -39,3 +41,4 @@ const Post = () => {
 // comments  Count
 // Hashtags
 // Filter used
+export default Post;

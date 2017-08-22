@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Post from "./Post.js";
-import { data } from "./photos.js";
+const instagramResponse = require("./photos.js");
+//console.log(instagramResponse)
+const data = instagramResponse.data;
 const post = data[0];
 
 class Gallery extends Component {
@@ -13,8 +15,22 @@ class Gallery extends Component {
   render() {
     return (
       <div className="container">
-        <Post post={this.state.post} key={this.state.post.id} />
+        <table className="table table-bordered">
+        <thead className="thead-inverse">
+          <tr>
+            <th>username</th>
+            <th>creation_time</th>
+            <th>thumbnail</th>
+            <th># of Likes</th>
+            <th># of Comments</th>
+            <th>Tags</th>
+            <th>Filter Used</th>
+          </tr>
+          </thead>
+          <Post post={this.state.post} key={this.state.post.id} />
+        </table>
       </div>
     );
   }
 }
+export default Gallery;
