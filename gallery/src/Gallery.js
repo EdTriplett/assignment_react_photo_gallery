@@ -5,33 +5,28 @@ const instagramResponse = require("./photos.js");
 const data = instagramResponse.data;
 //fix in a second
 // const post = data[1];
+let userInput = {
+  filter: "none",
+  search: ""
+};
 
 class Gallery extends Component {
   constructor() {
     super();
-    this.state = { posts: data };
+    //TODO: make a row component thing for the gallery
+    this.state = {
+      posts: data,
+      displayList: [],
+      userInputs: userInput
+    };
   }
-
   render() {
     return (
       <div className="container">
-        {/* <table className="table table-bordered">
-          <thead className="thead-inverse">
-            <tr>
-              <th>username</th>
-              <th>creation_time</th>
-              <th>thumbnail</th>
-              <th># of Likes</th>
-              <th># of Comments</th>
-              <th>Tags</th>
-              <th>Filter Used</th>
-            </tr>
-          </thead>
-          <Post post={this.state.post} key={this.state.post.id} />
-        </table> */}
         <div className="card-deck">
-          {this.state.posts.map(post => <Post post={post} key={post.id} />)}
-          {/* <Post post={this.state.post} key={this.state.post.id} /> */}
+          <div className="row">
+            {this.state.posts.map(post => <Post post={post} key={post.id} />)}
+          </div>
         </div>
       </div>
     );

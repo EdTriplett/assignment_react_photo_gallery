@@ -23,7 +23,9 @@ post.images = {
 
 Components:
   header,
-  search bar
+    search bar
+    sort
+    filter
   Gallery: container for ind. posts, each of which have
     Username
     the time it was posted,
