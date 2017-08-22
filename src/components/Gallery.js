@@ -17,7 +17,11 @@ class Gallery extends Component {
     this.state = {
       posts: data,
       displayList: [],
-      userInputs: userInput
+      userInputs: userInput,
+      selectedFilter: "",
+      searchText: "",
+      sortField: ""
+      
     };
   }
   render() {
