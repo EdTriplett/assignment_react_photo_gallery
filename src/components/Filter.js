@@ -12,7 +12,7 @@ const Filter = ({ onClick, selectedFilter }) => {
 
   return (
     <div id="ROOOOOOT">
-      <select className="form-control" name="selectedFilter" onClick={onClick}>
+      <select className="form-control" name="selectedFilter" onChange={onClick}>
         {filtersArray.map(filter =>
           <option
             className="dropdown-item"
@@ -35,7 +35,7 @@ const Filter = ({ onClick, selectedFilter }) => {
           id="dropdownMenuButton"
           data-toggle="dropdown"
           aria-haspopup="true"
-          aria-expanded="false"
+          aria-expanded="false" 
         >
           Filter by Filter
         </button>

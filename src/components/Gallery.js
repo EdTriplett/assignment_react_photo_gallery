@@ -7,6 +7,13 @@ let userInput = {
   search: ""
 };
 
+const Showable = ({show, children}) => {
+  if (!show) {
+    return null
+  }
+  return <div>{children}</div>
+}
+
 class Gallery extends Component {
   constructor() {
     super();
@@ -21,11 +28,17 @@ class Gallery extends Component {
     };
   }
   render() {
+//    const showPost = 
+
     return (
       <div className="container">
         <div className="card-deck">
           <div className="row">
-            {this.state.posts.map(post => <Post post={post} key={post.id} />)}
+            {this.state.posts.map(post => 
+              // <Showable show={post.filter===this.state.selectedFilter}>
+              <Post post={post} key={post.id} />
+              // </Showable>
+              )}
           </div>
         </div>
       </div>
